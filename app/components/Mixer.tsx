@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useColor } from "./ColorProvider";
 import { BRAND_CHIPS } from "@/lib/data";
 import { hexToRgb, type RGB } from "@/lib/color";
@@ -17,7 +18,14 @@ const CHANNEL_LABEL: Record<"r" | "g" | "b", string> = {
 };
 
 export function Mixer() {
-  const { r, g, b, hex, text, light, setRGB, setHex } = useColor();
+  const { r, g, b, hex, text, light, setRGB, setHex, saveColor } = useColor();
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    if (!saved) return;
+    const t = setTimeout(() => setSaved(false), 1800);
+    return () => clearTimeout(t);
+  }, [saved]);
   const channels: Array<["r" | "g" | "b", number]> = [
     ["r", r],
     ["g", g],
@@ -97,9 +105,14 @@ export function Mixer() {
 
       <button
         type="button"
-        className="dn-mono cursor-pointer border border-noir-line bg-transparent p-4 text-[12px] font-semibold uppercase tracking-[.1em] text-noir-fg hover:border-[var(--accent)]"
+        onClick={() => {
+          saveColor();
+          setSaved(true);
+        }}
+        aria-live="polite"
+        className="dn-mono cursor-pointer border border-noir-line bg-transparent p-4 text-[12px] font-semibold uppercase tracking-[.1em] text-noir-fg transition-colors hover:border-[var(--accent)]"
       >
-        Guardar cor
+        {saved ? "✓ Guardado" : "Guardar cor"}
       </button>
     </div>
   );
