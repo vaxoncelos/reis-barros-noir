@@ -37,12 +37,19 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitScript = `(function(){try{var s=localStorage.getItem('rb-theme');var t=s==='light'||s==='dark'?s:(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="pt"
+      data-theme="dark"
+      suppressHydrationWarning
       className={`${interTight.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );

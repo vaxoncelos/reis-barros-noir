@@ -5,9 +5,9 @@ import { BRAND_CHIPS } from "@/lib/data";
 import { hexToRgb, type RGB } from "@/lib/color";
 
 const CHANNEL_GRADIENT: Record<"r" | "g" | "b", string> = {
-  r: "linear-gradient(to right, #0E0E0E, #FF0000)",
-  g: "linear-gradient(to right, #0E0E0E, #00FF00)",
-  b: "linear-gradient(to right, #0E0E0E, #0000FF)",
+  r: "linear-gradient(to right, var(--noir-channel-base), #FF0000)",
+  g: "linear-gradient(to right, var(--noir-channel-base), #00FF00)",
+  b: "linear-gradient(to right, var(--noir-channel-base), #0000FF)",
 };
 
 const CHANNEL_LABEL: Record<"r" | "g" | "b", string> = {

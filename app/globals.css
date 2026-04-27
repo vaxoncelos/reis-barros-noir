@@ -6,10 +6,30 @@
   --color-noir-fg: #e8e5dc;
   --color-noir-line: #2a2a26;
   --color-noir-mute: #7a766c;
+  --color-noir-soft: #c8c4ba;
 
   --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, monospace;
   --font-display: var(--font-fraunces), Georgia, serif;
+}
+
+:root {
+  --noir-grid-line: rgba(232, 229, 220, 0.04);
+  --noir-channel-base: #0e0e0e;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --color-noir-bg: #f8f6f0;
+  --color-noir-card: #eeeae0;
+  --color-noir-fg: #0e0e0e;
+  --color-noir-line: #d8d2c4;
+  --color-noir-mute: #6b6760;
+  --color-noir-soft: #3a3a36;
+
+  --noir-grid-line: rgba(14, 14, 14, 0.05);
+  --noir-channel-base: #f0ece2;
+  color-scheme: light;
 }
 
 html,
@@ -19,6 +39,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
@@ -39,8 +60,8 @@ body {
 /* Faint grid pattern used on hero + location cards */
 .dn-grid-bg {
   background-image:
-    linear-gradient(to right, rgba(232, 229, 220, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(232, 229, 220, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, var(--noir-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--noir-grid-line) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -74,7 +95,7 @@ body {
   -webkit-appearance: none;
   width: 4px;
   height: 28px;
-  background: #e8e5dc;
+  background: var(--color-noir-fg);
   border: none;
   border-radius: 0;
   cursor: ew-resize;
@@ -83,7 +104,7 @@ body {
 .dn-slider::-moz-range-thumb {
   width: 4px;
   height: 28px;
-  background: #e8e5dc;
+  background: var(--color-noir-fg);
   cursor: ew-resize;
   border: none;
   border-radius: 0;
@@ -127,6 +148,23 @@ body {
 }
 .dn-input:focus {
   border-color: var(--accent);
+}
+
+/* Theme toggle button */
+.dn-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--color-noir-line);
+  background: transparent;
+  color: var(--color-noir-fg);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.dn-theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* Marquee animation — duration matches prototype (35s) */

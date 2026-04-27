@@ -22,7 +22,7 @@ export function Locations() {
               <div className="dn-cond text-[clamp(40px,5vw,56px)] font-extrabold uppercase leading-[.9] tracking-[-.02em]">
                 {l.city}
               </div>
-              <div className="dn-mono mt-5 text-[12px] leading-[1.7] text-[#c8c4ba]">
+              <div className="dn-mono mt-5 text-[12px] leading-[1.7] text-noir-soft">
                 <div>↳ {l.addr}</div>
                 <div>↳ {l.hours}</div>
                 <div className="mt-2 text-[var(--accent)] transition-colors">↳ {l.phone}</div>
