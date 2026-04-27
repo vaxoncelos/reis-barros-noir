@@ -24,8 +24,8 @@ export function Hero() {
             <span className="inline-block border-b-[8px] border-current pb-[6px]">cor</span>.
           </h1>
           <p className="mt-8 max-w-[540px] text-[18px] leading-[1.55] text-noir-soft">
-            Tintas, vernizes, esmaltes e materiais de construção em toda a Madeira. 240 cores de
-            catálogo, misturador automático nas três lojas, entrega em obra.
+            Tintas, vernizes, esmaltes e materiais de construção em Ribeira Brava, Madeira. CIN,
+            Robbialac, Mirka, Titan e Veneziani. Misturamos a cor, fornecemos a obra.
           </p>
         </div>
         <Mixer />

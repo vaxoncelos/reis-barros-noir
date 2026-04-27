@@ -3,10 +3,12 @@ import { Ticker } from "./components/Ticker";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { Categories } from "./components/Categories";
+import { Brands } from "./components/Brands";
 import { ColorFlood } from "./components/ColorFlood";
 import { Locations } from "./components/Locations";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { WhatsAppWidget } from "./components/WhatsAppWidget";
 
 export default function HomePage() {
   return (
@@ -16,10 +18,12 @@ export default function HomePage() {
         <Nav />
         <Hero />
         <Categories />
+        <Brands />
         <ColorFlood />
         <Locations />
         <Contact />
         <Footer />
+        <WhatsAppWidget />
       </main>
     </ColorProvider>
   );

@@ -4,12 +4,16 @@ export function Locations() {
   return (
     <section className="px-8 py-24 md:py-[100px]" id="lojas">
       <div className="dn-mono mb-4 text-[11px] tracking-[.15em] text-noir-mute">
-        {"// 04 — LOJAS"}
+        {"// 05 — LOJA"}
       </div>
       <h2 className="dn-cond m-0 mb-12 text-[clamp(48px,7vw,72px)] font-extrabold uppercase tracking-[-.03em]">
         Onde estamos
       </h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div
+        className={`grid grid-cols-1 gap-4 ${
+          LOCATIONS.length > 1 ? "md:grid-cols-3" : ""
+        }`}
+      >
         {LOCATIONS.map((l, i) => (
           <article
             key={l.city}

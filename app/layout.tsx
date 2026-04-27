@@ -25,13 +25,13 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Reis & Barros — Tintas e materiais de construção · Madeira",
+  title: "Reis & Barros — Tintas, ferramentas e construção · Ribeira Brava, Madeira",
   description:
-    "Tintas, vernizes, esmaltes e materiais de construção em toda a Madeira. 240 cores de catálogo, misturador automático nas três lojas, entrega em obra.",
+    "Tintas, vernizes, esmaltes, abrasivos e materiais de construção em Ribeira Brava, Madeira. CIN, Robbialac, Mirka, Titan, Veneziani, Powermix, Sparco. Desde 1999.",
   metadataBase: new URL("https://reis-barros.example.com"),
   openGraph: {
     title: "Reis & Barros — Tintas · Madeira",
-    description: "240 cores · misturador automático · entrega 24h em obra",
+    description: "Desde 1999 · CIN · Robbialac · Mirka · Titan · Ribeira Brava",
     locale: "pt_PT",
     type: "website",
   },

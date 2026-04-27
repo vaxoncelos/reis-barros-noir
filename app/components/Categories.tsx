@@ -16,7 +16,7 @@ export function Categories() {
             className="dn-cat group flex min-h-[240px] cursor-pointer flex-col justify-between border-2 border-transparent bg-noir-bg p-7 transition-colors"
           >
             <div className="dn-mono dn-cat-num text-[12px] tracking-[.15em] text-noir-mute transition-colors">
-              {String(i + 1).padStart(2, "0")} / 08
+              {String(i + 1).padStart(2, "0")} / {String(PRODUCT_CATEGORIES.length).padStart(2, "0")}
             </div>
             <div>
               <div className="dn-cond text-[28px] font-bold uppercase leading-[1] tracking-[-.01em] md:text-[32px]">

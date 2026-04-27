@@ -22,7 +22,7 @@ export function ColorFlood() {
         className="dn-mono mb-4 text-[11px] uppercase tracking-[.15em]"
         style={{ color: muteColor }}
       >
-        {"// 03 — A SUA COR, EM ESCALA"}
+        {"// 04 — A SUA COR, EM ESCALA"}
       </div>
       <h2 className="dn-cond m-0 text-[clamp(64px,13vw,200px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
         {hex}

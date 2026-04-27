@@ -5,14 +5,14 @@ export type ProductCategory = {
 };
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
-  { id: "tintas", name: "Tintas", desc: "Interior · exterior · profissional" },
-  { id: "maritimas", name: "Tintas Marítimas", desc: "Antivegetativas · cascos · convés" },
+  { id: "tintas", name: "Tintas", desc: "CIN · Robbialac · Nitin · interior e exterior" },
+  { id: "maritimas", name: "Tintas Marítimas", desc: "Titan · Veneziani · antivegetativas e cascos" },
   { id: "vernizes", name: "Vernizes", desc: "Madeira · pavimentos · móveis" },
   { id: "esmaltes", name: "Esmaltes", desc: "Metal · madeira · alta resistência" },
-  { id: "argamassas", name: "Argamassas", desc: "Colas · rebocos · impermeabilização" },
-  { id: "ferramentas", name: "Ferramentas", desc: "Profissionais · acessórios" },
-  { id: "iluminacao", name: "Iluminação", desc: "Material elétrico · LED" },
-  { id: "epis", name: "EPIs", desc: "Equipamentos de proteção individual" },
+  { id: "ferramentas", name: "Ferramentas", desc: "VITO · elétricas · manuais · acessórios" },
+  { id: "abrasivos", name: "Abrasivos", desc: "Mirka · lixadoras · aspiração de pó" },
+  { id: "construcao", name: "Construção", desc: "Argamassas · rebocos · Powermix" },
+  { id: "epis", name: "EPIs & Vestuário", desc: "Sparco · calçado e proteção" },
 ];
 
 export type Location = {
@@ -24,22 +24,10 @@ export type Location = {
 
 export const LOCATIONS: Location[] = [
   {
-    city: "Funchal",
-    addr: "Rua dos Pintores, 24",
-    hours: "Seg–Sex 8h–19h · Sáb 9h–13h",
-    phone: "+351 291 000 000",
-  },
-  {
-    city: "Câmara de Lobos",
-    addr: "Estrada Nacional, 102",
-    hours: "Seg–Sex 8h–18h · Sáb 9h–13h",
-    phone: "+351 291 000 000",
-  },
-  {
-    city: "Machico",
-    addr: "Zona Industrial, Lote 7",
-    hours: "Seg–Sex 8h–18h",
-    phone: "+351 291 000 000",
+    city: "Ribeira Brava",
+    addr: "Rua de São Pedro, Loja B · 9350-212",
+    hours: "Seg–Sex 8h–13h · Sáb 8h–12h",
+    phone: "+351 291 957 604",
   },
 ];
 
@@ -52,28 +40,49 @@ export const BRAND_CHIPS: BrandChip[] = [
   { hex: "#E8E2D2", name: "Cal" },
 ];
 
+export type Brand = { name: string; focus: string };
+
+export const BRANDS: Brand[] = [
+  { name: "CIN", focus: "Tintas arquitetónicas premium · linha Carso" },
+  { name: "Robbialac", focus: "Revestimentos e tintas de alta qualidade" },
+  { name: "Nitin", focus: "Tintas decorativas e de proteção" },
+  { name: "Titan", focus: "Tintas e primários marítimos" },
+  { name: "Veneziani", focus: "Iate e embarcações · acabamentos profissionais" },
+  { name: "Mirka", focus: "Lixadoras orbitais · DEROS · aspiração DEXOS" },
+  { name: "Powermix", focus: "Bombas de mistura e reboco contínuas" },
+  { name: "VITO", focus: "Ferramentas elétricas · compressores" },
+  { name: "Sparco", focus: "Vestuário e calçado de proteção" },
+  { name: "Rust-Oleum", focus: "Sprays especiais · linha Chalked" },
+];
+
 export type NavLink = string;
 export const NAV_LINKS: NavLink[] = [
   "Catálogo",
   "Misturador",
-  "Obra",
-  "Naval",
-  "Lojas",
+  "Marcas",
+  "Loja",
   "Contacto",
 ];
 
 export type Metric = { value: string; label: string };
 export const METRICS: Metric[] = [
-  { value: "48", label: "anos" },
-  { value: "3", label: "lojas" },
-  { value: "240", label: "cores" },
-  { value: "24h", label: "obra" },
+  { value: "1999", label: "desde" },
+  { value: "10+", label: "marcas" },
+  { value: "4.7★", label: "google" },
+  { value: "Madeira", label: "entrega" },
 ];
 
+export const WHATSAPP = {
+  number: "351291957604",
+  display: "+351 291 957 604",
+  greeting:
+    "Olá Reis & Barros, gostaria de pedir informação sobre…",
+};
+
 export const TICKER_MESSAGES: string[] = [
-  "Misture · encomende · receba em obra",
-  "240 cores · misturador automático",
-  "Entrega 24h · Madeira",
-  "Conta Pro −15% · empreitada",
-  "Desde 1978",
+  "Tintas · ferramentas · construção",
+  "CIN · Robbialac · Nitin · Mirka · Powermix",
+  "Tintas marítimas · Titan · Veneziani",
+  "Entrega local · Madeira",
+  "Desde 1999 · Ribeira Brava",
 ];

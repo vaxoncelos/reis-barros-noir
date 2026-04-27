@@ -34,16 +34,53 @@ export function Contact() {
       id="contacto"
     >
       <div className="dn-mono mb-4 text-[11px] tracking-[.15em] text-noir-mute">
-        {"// 05 — CONTACTO"}
+        {"// 06 — CONTACTO"}
       </div>
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-[60px]">
-        <h2 className="dn-cond m-0 text-[clamp(56px,9vw,96px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
-          Pedido
-          <br />
-          <span className="text-[var(--accent)] transition-colors">de</span>
-          <br />
-          orçamento
-        </h2>
+        <div>
+          <h2 className="dn-cond m-0 text-[clamp(56px,9vw,96px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
+            Pedido
+            <br />
+            <span className="text-[var(--accent)] transition-colors">de</span>
+            <br />
+            orçamento
+          </h2>
+          <dl className="dn-mono mt-10 grid gap-5 text-[12px] uppercase tracking-[.1em]">
+            <div>
+              <dt className="text-noir-mute">↳ Telefone</dt>
+              <dd className="mt-1">
+                <a href="tel:+351291957604" className="text-[var(--accent)] transition-colors">
+                  +351 291 957 604
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-noir-mute">↳ Email</dt>
+              <dd className="mt-1">
+                <a
+                  href="mailto:reisebarroslda@gmail.com"
+                  className="text-[var(--accent)] transition-colors"
+                >
+                  reisebarroslda@gmail.com
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-noir-mute">↳ Morada</dt>
+              <dd className="mt-1 text-noir-soft">
+                Rua de São Pedro, Loja B · 9350-212 Ribeira Brava, Madeira
+              </dd>
+            </div>
+            <div>
+              <dt className="text-noir-mute">↳ Horário</dt>
+              <dd className="mt-1 text-noir-soft">
+                Seg–Sex 8h–13h
+                <br />
+                Sáb 8h–12h · Dom encerrado
+              </dd>
+            </div>
+          </dl>
+        </div>
         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <label className="contents">

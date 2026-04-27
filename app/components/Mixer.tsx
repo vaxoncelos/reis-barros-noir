@@ -95,21 +95,12 @@ export function Mixer() {
         })}
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
-        <button
-          type="button"
-          className="dn-mono cursor-pointer border-0 p-4 text-[12px] font-semibold uppercase tracking-[.1em] transition-colors duration-200"
-          style={{ background: hex, color: text }}
-        >
-          Encomendar 1L →
-        </button>
-        <button
-          type="button"
-          className="dn-mono cursor-pointer border border-noir-line bg-transparent p-4 text-[12px] font-semibold uppercase tracking-[.1em] text-noir-fg hover:border-[var(--accent)]"
-        >
-          Guardar cor
-        </button>
-      </div>
+      <button
+        type="button"
+        className="dn-mono cursor-pointer border border-noir-line bg-transparent p-4 text-[12px] font-semibold uppercase tracking-[.1em] text-noir-fg hover:border-[var(--accent)]"
+      >
+        Guardar cor
+      </button>
     </div>
   );
 }
