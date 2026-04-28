@@ -9,10 +9,12 @@ import { Locations } from "./components/Locations";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { WhatsAppWidget } from "./components/WhatsAppWidget";
+import { LoadingScreen } from "./components/LoadingScreen";
 
 export default function HomePage() {
   return (
     <ColorProvider>
+      <LoadingScreen />
       <main className="bg-noir-bg text-noir-fg">
         <Ticker />
         <Nav />
