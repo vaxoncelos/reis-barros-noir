@@ -169,7 +169,7 @@ body {
 
 /* Marquee animation — duration matches prototype (35s) */
 .dn-marquee {
-  animation: dn-marquee 35s linear infinite;
+  animation: dn-marquee 18s linear infinite;
   will-change: transform;
 }
 @keyframes dn-marquee {

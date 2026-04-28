@@ -15,20 +15,20 @@ export function ColorFlood() {
 
   return (
     <section
-      className="relative overflow-hidden px-8 py-24 transition-colors duration-150 md:py-[120px]"
+      className="relative overflow-hidden px-5 py-16 transition-colors duration-150 sm:px-8 md:py-[120px]"
       style={{ background: hex, color: text }}
     >
       <div
-        className="dn-mono mb-4 text-[11px] uppercase tracking-[.15em]"
+        className="dn-mono mb-3 text-[11px] uppercase tracking-[.15em] md:mb-4"
         style={{ color: muteColor }}
       >
         {"// 04 — A SUA COR, EM ESCALA"}
       </div>
-      <h2 className="dn-cond m-0 text-[clamp(64px,13vw,200px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
+      <h2 className="dn-cond m-0 text-[clamp(56px,13vw,200px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
         {hex}
       </h2>
       <div
-        className="mt-10 grid grid-cols-1 gap-8 border-t pt-8 md:grid-cols-3"
+        className="mt-8 grid grid-cols-1 gap-6 border-t pt-6 sm:gap-8 sm:pt-8 md:mt-10 md:grid-cols-3"
         style={{ borderColor }}
       >
         {SPECS.map((s) => (
@@ -39,7 +39,9 @@ export function ColorFlood() {
             >
               {s.label}
             </div>
-            <div className="dn-cond mt-2 text-[24px] font-bold md:text-[32px]">{s.value}</div>
+            <div className="dn-cond mt-2 text-[20px] font-bold sm:text-[24px] md:text-[32px]">
+              {s.value}
+            </div>
           </div>
         ))}
       </div>

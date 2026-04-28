@@ -30,22 +30,22 @@ export function Contact() {
 
   return (
     <section
-      className="border-t border-noir-line bg-noir-card px-8 py-24 md:py-[100px]"
+      className="border-t border-noir-line bg-noir-card px-5 py-16 sm:px-8 md:py-[100px]"
       id="contacto"
     >
-      <div className="dn-mono mb-4 text-[11px] tracking-[.15em] text-noir-mute">
+      <div className="dn-mono mb-3 text-[11px] tracking-[.15em] text-noir-mute md:mb-4">
         {"// 06 — CONTACTO"}
       </div>
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-[60px]">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-[60px]">
         <div>
-          <h2 className="dn-cond m-0 text-[clamp(56px,9vw,96px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
+          <h2 className="dn-cond m-0 text-[clamp(48px,9vw,96px)] font-extrabold uppercase leading-[.85] tracking-[-.04em]">
             Pedido
             <br />
             <span className="text-[var(--accent)] transition-colors">de</span>
             <br />
             orçamento
           </h2>
-          <dl className="dn-mono mt-10 grid gap-5 text-[12px] uppercase tracking-[.1em]">
+          <dl className="dn-mono mt-8 grid gap-5 text-[12px] uppercase tracking-[.1em] md:mt-10">
             <div>
               <dt className="text-noir-mute">↳ Telefone</dt>
               <dd className="mt-1">

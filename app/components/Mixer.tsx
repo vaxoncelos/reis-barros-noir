@@ -36,7 +36,7 @@ export function Mixer() {
     .padStart(3, "0");
 
   return (
-    <div className="flex flex-col gap-[18px] border border-noir-line p-6">
+    <div className="flex flex-col gap-[18px] border border-noir-line p-4 sm:p-6">
       <div className="dn-mono flex justify-between text-[11px] uppercase tracking-[.2em] text-noir-mute">
         <span>{"// MISTURADOR"}</span>
         <span className="text-[var(--accent)] transition-colors">● LIVE</span>

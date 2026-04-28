@@ -38,13 +38,13 @@ export function WhatsAppWidget() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
       {open ? (
         <div
           ref={popupRef}
           role="dialog"
           aria-label="Enviar mensagem por WhatsApp"
-          className="w-[320px] border border-noir-line bg-noir-card text-noir-fg shadow-[0_24px_60px_rgba(0,0,0,.45)]"
+          className="w-[min(320px,calc(100vw-40px))] border border-noir-line bg-noir-card text-noir-fg shadow-[0_24px_60px_rgba(0,0,0,.45)]"
         >
           <header
             className="flex items-center justify-between px-4 py-3"
